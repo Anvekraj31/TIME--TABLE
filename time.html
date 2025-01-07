@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Timetable</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #f4f4f9, #e0e4e8);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        /* Table Styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        th, td {
+            padding: 16px;
+            text-align: center;
+            border: 2px solid black;  /* Black borders for table cells */
+            font-size: 1rem;
+        }
+
+        th {
+            background-color: #007BFF;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+        }
+
+        td {
+            background-color: #fff;
+            color: #333;
+        }
+
+        td.time-column {
+            font-weight: bold;
+            background-color: #e9ecef;
+            color: #007BFF;
+            font-size: 1.1rem;
+        }
+
+        td.room-number {
+            font-weight: 500;
+        }
+
+        /* Color Class for Regular Classes */
+        td.class {
+            background-color: #e1f5fe;  /* Light blue for regular classes */
+        }
+
+        /* Color Class for Lab Sessions */
+        td.lab {
+            background-color: #f3e5f5;  /* Light purple for labs */
+        }
+
+        /* Color Class for Lunch Break */
+        td.lunch {
+            background-color: #fff3e0;  /* Soft orange for lunch */
+        }
+
+        /* Color Class for Empty or Leisure Time */
+        td.empty-cell {
+            background-color: #f1f1f1;  /* Gray for empty cells */
+        }
+
+        /* Responsive Styles */
+        @media screen and (max-width: 768px) {
+            table {
+                font-size: 0.9rem;
+            }
+
+            th, td {
+                padding: 12px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Weekly Timetable (9 AM - 5 PM IST)</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Time</th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thursday</th>
+                <th>Friday</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- First Row: 9:00 AM - 10:00 AM -->
+            <tr>
+                <td class="time-column">09:00 AM - 10:00 AM</td>
+                <td class="class">STM(3203)</td>
+                <td class="class">STM(3204)</td>
+                <td class="empty-cell"></td>
+                <td class="class">FAM(3216)</td>
+                <td class="class">FAM(3217)</td>
+            </tr>
+
+            <!-- Second Row: 10:00 AM - 11:00 AM -->
+            <tr>
+                <td class="time-column">10:00 AM - 11:00 AM</td>
+                <td class="empty-cell"></td>
+                <td class="empty-cell"></td>
+                <td class="lab">SL(3104)</td>
+                <td class="class">IoT(3014)</td>
+                <td class="class">FAM(3217)</td>
+            </tr>
+
+            <!-- Third Row: 11:00 AM - 12:00 PM -->
+            <tr>
+                <td class="time-column">11:00 AM - 12:00 PM</td>
+                <td class="lab">STM LAB(3201)</td>
+                <td class="empty-cell"></td>
+                <td class="class">IoT(3014)</td>
+                <td class="empty-cell"></td>
+                <td class="empty-cell"></td>
+            </tr>
+
+            <!-- Fourth Row: 12:00 PM - 01:00 PM -->
+            <tr>
+                <td class="time-column">12:00 PM - 01:00 PM</td>
+                <td class="lab">STM LAB(3201)</td>
+                <td class="lunch">LUNCH</td>
+                <td class="lunch">LUNCH</td>
+                <td class="lunch">LUNCH</td>
+                <td class="empty-cell"></td>
+            </tr>
+
+            <!-- Fifth Row: 01:00 PM - 02:00 PM -->
+            <tr>
+                <td class="time-column">01:00 PM - 02:00 PM</td>
+                <td class="lunch">LUNCH</td>
+                <td class="lab">SL LAB(3201)</td>
+                <td class="empty-cell"></td>
+                <td class="empty-cell"></td>
+                <td class="empty-cell"></td>
+            </tr>
+
+            <!-- Sixth Row: 02:00 PM - 03:00 PM -->
+            <tr>
+                <td class="time-column">02:00 PM - 03:00 PM</td>
+                <td class="class">SL(3104)</td>
+                <td class="lab">SL LAB(3201)</td>
+                <td class="empty-cell"></td>
+                <td class="empty-cell"></td>
+                <td class="empty-cell"></td>
+            </tr>
+
+            <!-- Seventh Row: 03:00 PM - 04:00 PM -->
+            <tr>
+                <td class="time-column">03:00 PM - 04:00 PM</td>
+                <td class="class">ES(3005)</td>
+                <td class="empty-cell"></td>
+                <td class="empty-cell"></td>
+                <td class="empty-cell"></td>
+                <td class="empty-cell"></td>
+            </tr>
+
+            <!-- Eighth Row: 04:00 PM - 05:00 PM -->
+            <tr>
+                <td class="time-column">04:00 PM - 05:00 PM</td>
+                <td class="empty-cell"></td>
+                <td class="empty-cell"></td>
+                <td class="empty-cell"></td>
+                <td class="empty-cell"></td>
+                <td class="empty-cell"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
